@@ -1,5 +1,5 @@
 {
-  "name": "sevenupbot",
+  "name": "svnup",
   "version": "2.0.0",
   "description": "DiscordJS bot for SevenUp Gaming",
   "keywords": [
@@ -11,7 +11,7 @@
     "widget"
   ],
   "bin": {
-    "sevenupbot": "./src/index.js"
+    "svnup": "./src/index.js"
   },
   "engines": {
     "node": "12.x"
