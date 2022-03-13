@@ -1,0 +1,29 @@
+{
+  "name": "sevenupbot",
+  "version": "2.0.0",
+  "description": "DiscordJS bot for SevenUp Gaming",
+  "keywords": [
+    "discord",
+    "bot",
+    "discord-bot",
+    "framework",
+    "template",
+    "widget"
+  ],
+  "bin": {
+    "sevenupbot": "./src/index.js"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamguardian/sevenupbot.git"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js#master"
+  }
+}
