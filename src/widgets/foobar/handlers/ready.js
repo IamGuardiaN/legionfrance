@@ -3,7 +3,7 @@ module.exports = async client => {
   const Discord = require('discord.js');
 
 // Start Statistics Part 
-/*
+
   // Get our server
 const guild = client.guilds.cache.get('437314508080414741');
 
@@ -11,13 +11,10 @@ const guild = client.guilds.cache.get('437314508080414741');
 await guild.members.fetch()
 
 // Get our stats channels
-const totalUsers = client.channels.cache.get('704600819605045340');
-const onlineUsers = client.channels.cache.get('704600906678927401');
-const membersR6S = client.channels.cache.get('705086489138036776');
-const membersCS = client.channels.cache.get('705092697337102438');
-const membersValorant = client.channels.cache.get('705086559782830171');
-const membersRL = client.channels.cache.get('705093298615746673');
-const membersFTN = client.channels.cache.get('705106470571737179');
+const totalUsers = client.channels.cache.get('952596026836004875');
+const onlineUsers = client.channels.cache.get('952596729914589294');
+const membersR6S = client.channels.cache.get('952596785430421574');
+const membersCS = client.channels.cache.get('952596824521334904');
 
 // Check every 30 seconds for changes
 setInterval(function() {
@@ -26,11 +23,8 @@ setInterval(function() {
   //Get actual counts
   var userCount = guild.memberCount;
   var onlineCount = guild.members.cache.filter(m => m.presence.status === 'online').size
-  var r6sCount = guild.members.cache.filter(m => m.roles.cache.has('704649656214224936')).size;
-  var csCount = guild.members.cache.filter(m => m.roles.cache.has('704684962833760366')).size;
-  var valorantCount = guild.members.cache.filter(m => m.roles.cache.has('704685065539551255')).size;
-  var rlCount = guild.members.cache.filter(m => m.roles.cache.has('704685104605167616')).size;
-  var ftnCount = guild.members.cache.filter(m => m.roles.cache.has('704720343318790234')).size;
+  var r6sCount = guild.members.cache.filter(m => m.roles.cache.has('865688681213984768')).size;
+  var csCount = guild.members.cache.filter(m => m.roles.cache.has('857332803938287673')).size;
 
 
   // Log counts for debugging
@@ -38,9 +32,6 @@ setInterval(function() {
   console.log("En ligne: " + onlineCount);
   console.log("Membres R6S: " + r6sCount);
   console.log("Membres CS: " + csCount);
-  console.log("Membres Valorant: " + valorantCount);
-  console.log("Membres RL: " + rlCount);
-  console.log("Membres Fortnite: " + ftnCount);
 
 
   // Set channel names
@@ -60,21 +51,10 @@ setInterval(function() {
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
 
-  membersValorant.setName("Membres Valorant: " + valorantCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
-
-  membersRL.setName("Membres RL: " + rlCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
-
-  membersFTN.setName("Membres Fortnite: " + ftnCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
-  }, 600000)
+  }, 5000)
 
  // End of Statistics Parts
-  */
+  
   client.on('guildMemberAdd', member => {
 
  // Start of Welcome and Quit Part
@@ -85,9 +65,9 @@ setInterval(function() {
     let welcomeEmbed = new Discord.MessageEmbed()
       .setColor("#0097d9")
       .setAuthor("SEVENUP GAMING", "https://cdn.discordapp.com/avatars/437703656234549249/904b84f646f859044e2b7b79f9ee9eca.png")
-      .setTitle("Bienvenue à toi sur le SevenUp Gaming ! <:sevenup:704404951610294373>")
+      .setTitle("Bienvenue à toi sur le SevenUp Gaming ! <:sevenup:774029789317038100>")
       .setDescription("Nous vous remercions d'avoir rejoins le serveur et nous vous\n demandons de bien respecter les règles de la communauté et du Discord\n et nous vous souhaitons un très bon moment parmis nous !")
-      //.setThumbnail("https://pbs.twimg.com/profile_images/1047617625944182784/01233MlA_400x400.jpg")
+      .setThumbnail("https://cdn.discordapp.com/avatars/437703656234549249/904b84f646f859044e2b7b79f9ee9eca.png")
       .setImage('https://cdn.discordapp.com/avatars/437703656234549249/904b84f646f859044e2b7b79f9ee9eca.png')
       .setFooter("L'Équipe de SevenUp Gaming")
 
