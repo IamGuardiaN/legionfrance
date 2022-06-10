@@ -1,2 +1,2 @@
 # sevenupbot
-Discord JS bot for SevenUp Gaming Community
+Discord JS bot for Legion Community
